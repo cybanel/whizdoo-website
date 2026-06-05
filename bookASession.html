@@ -8,24 +8,29 @@
   </head>
   <body class="wz">
     <nav class="nav">
-        <a href="index.html" class="nav-brand">
-    <div class="nav-icon">
-      <svg viewBox="0 0 24 24">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
-      </svg>
-    </div>
-    <div class="nav-name">Whiz<span>doo</span></div>
-  </a>
-      <ul class="nav-links">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <div class="nav-name">Whiz<span>doo</span></div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="tutors.html">Tutors</a></li>
         <li><a href="programs.html">Programs</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li>
-          <li><a href="bookASession.html" class="nav-btn">Book a Session</a></li>
-        </li>
+        <li><a href="bookASession.html" class="nav-btn">Book a Session</a></li>
       </ul>
     </nav>
 
@@ -40,10 +45,18 @@
     <div class="form-section">
       <form action="https://api.web3forms.com/submit" method="POST">
         <!-- Your Web3Forms access key -->
-        <input type="hidden" name="access_key" value="075a1621-3a29-4678-acf9-0060ed557a9c" />
+        <input
+          type="hidden"
+          name="access_key"
+          value="075a1621-3a29-4678-acf9-0060ed557a9c"
+        />
 
         <!-- This is the subject line Elli sees in her email -->
-        <input type="hidden" name="subject" value="📍New Booking Request! — Whizdoo" />
+        <input
+          type="hidden"
+          name="subject"
+          value="📍New Booking Request! — Whizdoo"
+        />
 
         <input type="hidden" name="replyto" value="true" />
         <div class="form-row">
@@ -107,32 +120,36 @@
         </div>
 
         <div class="form-group">
-  <label>Subject/s Needed</label>
-  <div class="checkbox-group">
-    <label class="checkbox-item">
-      <input type="checkbox" class="subject-check" value="Mathematics" />
-      Mathematics
-    </label>
-    <label class="checkbox-item">
-      <input type="checkbox" class="subject-check" value="Science" />
-      Science
-    </label>
-    <label class="checkbox-item">
-      <input type="checkbox" class="subject-check" value="English" />
-      English
-    </label>
-    <label class="checkbox-item">
-      <input type="checkbox" class="subject-check" value="History" />
-      History
-    </label>
-    <label class="checkbox-item">
-      <input type="checkbox" class="subject-check" value="Filipino" />
-      Filipino
-    </label>
-  </div>
-  <!-- This hidden input is what actually gets sent -->
-  <input type="hidden" name="Subjects" id="subjects-hidden" />
-</div>
+          <label>Subject/s Needed</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="subject-check"
+                value="Mathematics"
+              />
+              Mathematics
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="subject-check" value="Science" />
+              Science
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="subject-check" value="English" />
+              English
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="subject-check" value="History" />
+              History
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" class="subject-check" value="Filipino" />
+              Filipino
+            </label>
+          </div>
+          <!-- This hidden input is what actually gets sent -->
+          <input type="hidden" name="Subjects" id="subjects-hidden" />
+        </div>
 
         <div class="divider"></div>
 
@@ -171,12 +188,14 @@
     </footer>
 
     <script>
-  document.querySelector("form").addEventListener("submit", function () {
-    const checked = [...document.querySelectorAll(".subject-check:checked")]
-      .map((cb) => cb.value)
-      .join(", ");
-    document.getElementById("subjects-hidden").value = checked;
-  });
-</script>
+      document.querySelector("form").addEventListener("submit", function () {
+        const checked = [...document.querySelectorAll(".subject-check:checked")]
+          .map((cb) => cb.value)
+          .join(", ");
+        document.getElementById("subjects-hidden").value = checked;
+      });
+    </script>
+
+    <script src="script.js"></script>
   </body>
 </html>

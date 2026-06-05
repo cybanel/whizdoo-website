@@ -20,12 +20,14 @@
           <div class="nav-name">Whiz<span>doo</span></div>
         </a>
 
-        <ul class="nav-links">
-          <li>
-            <a href="about.html" style="color: #4a90d9; font-weight: 700"
-              >About</a
-            >
-          </li>
+        <button class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
           <li><a href="tutors.html">Tutors</a></li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -162,5 +164,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
