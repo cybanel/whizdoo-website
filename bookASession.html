@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Book a Session</title>
+  </head>
+  <body class="wz">
+    <nav class="nav">
+        <a href="index.html" class="nav-brand">
+    <div class="nav-icon">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5" />
+        <path d="M2 12l10 5 10-5" />
+      </svg>
+    </div>
+    <div class="nav-name">Whiz<span>doo</span></div>
+  </a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutors.html">Tutors</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <li><a href="bookASession.html" class="nav-btn">Book a Session</a></li>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-header">
+      <div class="eyebrow">Let's Get Started</div>
+      <h1>Book a Session</h1>
+      <p>
+        Fill out the form below and we will get back to you as soon as possible!
+      </p>
+    </div>
+
+    <div class="form-section">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- Your Web3Forms access key -->
+        <input type="hidden" name="access_key" value="075a1621-3a29-4678-acf9-0060ed557a9c" />
+
+        <!-- This is the subject line Elli sees in her email -->
+        <input type="hidden" name="subject" value="📍New Booking Request! — Whizdoo" />
+
+        <input type="hidden" name="replyto" value="true" />
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g. Maria Santos"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="e.g. 09XX XXX XXXX"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e.g. mariasantos@gmail.com"
+            required
+          />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="grade">Child's Grade Level</label>
+            <select id="grade" name="grade" required>
+              <option value="" disabled selected>Select grade level</option>
+              <option>Grade 3</option>
+              <option>Grade 4</option>
+              <option>Grade 5</option>
+              <option>Grade 6</option>
+              <option>Grade 7</option>
+              <option>Grade 8</option>
+              <option>Grade 9</option>
+              <option>Grade 10</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="session">Preferred Session Type</label>
+            <select id="session" name="session" required>
+              <option value="" disabled selected>Select session type</option>
+              <option>In-Person</option>
+              <option>Online</option>
+              <option>No preference</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+  <label>Subject/s Needed</label>
+  <div class="checkbox-group">
+    <label class="checkbox-item">
+      <input type="checkbox" class="subject-check" value="Mathematics" />
+      Mathematics
+    </label>
+    <label class="checkbox-item">
+      <input type="checkbox" class="subject-check" value="Science" />
+      Science
+    </label>
+    <label class="checkbox-item">
+      <input type="checkbox" class="subject-check" value="English" />
+      English
+    </label>
+    <label class="checkbox-item">
+      <input type="checkbox" class="subject-check" value="History" />
+      History
+    </label>
+    <label class="checkbox-item">
+      <input type="checkbox" class="subject-check" value="Filipino" />
+      Filipino
+    </label>
+  </div>
+  <!-- This hidden input is what actually gets sent -->
+  <input type="hidden" name="Subjects" id="subjects-hidden" />
+</div>
+
+        <div class="divider"></div>
+
+        <div class="form-group">
+          <label for="message">Message / Additional Info</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us anything else we should know — your child's learning style, specific topics they're struggling with, your preferred schedule, etc."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Booking Request</button>
+        <p class="form-note">
+          By submitting this form, your information will be sent directly to
+          Whizdoo's email. We will never share your details with anyone.
+        </p>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">Whiz<span>doo</span></div>
+          <div class="footer-tagline">
+            Learning should never feel like a chore.
+          </div>
+        </div>
+        <div style="text-align: right">
+          <a href="#" class="footer-fb">Follow us on Facebook</a>
+          <div class="footer-copy">
+            © 2025 Whizdoo Learning Center · Philippines
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+  document.querySelector("form").addEventListener("submit", function () {
+    const checked = [...document.querySelectorAll(".subject-check:checked")]
+      .map((cb) => cb.value)
+      .join(", ");
+    document.getElementById("subjects-hidden").value = checked;
+  });
+</script>
+  </body>
+</html>
