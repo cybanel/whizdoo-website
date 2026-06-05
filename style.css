@@ -1502,3 +1502,31 @@ h3 {
 .social-btn.tk svg {
   stroke: #010101;
 }
+
+/* MOBILE BLABLABA */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+  .tutor-item {
+    grid-template-columns: 1fr;
+  }
+  .test-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
