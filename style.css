@@ -1529,6 +1529,26 @@ h3 {
   .form-row {
     grid-template-columns: 1fr;
   }
+  /* Fix the three quotes stacking */
+  .supporting-quotes {
+    grid-template-columns: 1fr;
+  }
+
+  /* Fix Elli's section stacking */
+  .elli-section {
+    grid-template-columns: 1fr;
+    padding-top: 3rem;
+  }
+
+  .elli-photo img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .elli-info {
+    padding: 3rem 1.5rem;
+    border-top: none;
+  }
 }
 
 /* hamburger menu for mobile */
