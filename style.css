@@ -792,8 +792,8 @@ h3 {
 }
 
 .sq {
-  background: #4a90d9;
-  border: 1px solid #ffffff;
+  color: #010101;
+  background: #fffbdd;
   border-radius: 14px;
   padding: 1.2rem 1.5rem;
   text-align: left;
@@ -801,14 +801,14 @@ h3 {
 
 .sq p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #555555;
   line-height: 1.7;
   font-style: italic;
 }
 
 .sq span {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: #1362b6;
   font-weight: 600;
   display: block;
   margin-top: 0.6rem;
