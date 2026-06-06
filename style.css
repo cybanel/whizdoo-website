@@ -1040,6 +1040,7 @@ h3 {
   height: 180px;
   border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 .session-photo img {
   width: 100%;
@@ -1315,14 +1316,14 @@ h3 {
   width: 260px;
   height: 300px;
   border-radius: 16px;
-  background: #fffbdd;
-  border: 2px dashed #e6d97a;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 8px;
   overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 .tutor-photo img {
   width: 100%;
@@ -1344,10 +1345,7 @@ h3 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 .tutor-line {
-  width: 260px;
-  height: 3px;
-  background: #4a90d9;
-  border-radius: 2px;
+  display: none;
 }
 .tutor-info {
   display: flex;
@@ -1374,12 +1372,7 @@ h3 {
   color: #e6a817;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
-.tutor-divider {
-  width: 36px;
-  height: 3px;
-  background: #4a90d9;
-  border-radius: 2px;
-}
+
 .tutor-bio {
   font-size: 14px;
   color: #555;
@@ -1410,6 +1403,15 @@ h3 {
   height: 16px;
   fill: none;
   stroke-width: 2;
+}
+
+.social-btn.li {
+  border-color: #0a66c2;
+  color: #0a66c2;
+}
+
+.social-btn.li svg {
+  stroke: #0a66c2;
 }
 .social-btn.fb {
   border-color: #1877f2;
@@ -1545,5 +1547,14 @@ h3 {
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    text-align: left;
   }
 }
