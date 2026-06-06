@@ -1557,4 +1557,19 @@ h3 {
   .footer-right {
     text-align: left;
   }
+
+  .contact-card {
+    flex-wrap: wrap;
+  }
+
+  .contact-value {
+    font-size: 14px;
+    word-break: break-all;
+  }
+
+  .contact-card a {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
