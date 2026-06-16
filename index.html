@@ -32,7 +32,17 @@
           <li><a href="programs.html">Programs</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="bookASession.html" class="nav-btn">Book a Session</a>
+            <a href="bookASession.html" class="blob-btn blob-btn--blue">
+              Book a Session
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -45,7 +55,7 @@
             <h1>
               <a style="color: #ffffff">
                 We don't just teach — we make learning feel like
-                <em>play.</em></a
+                <em style="color: #ffffff">play.</em></a
               >
             </h1>
             <p>
@@ -56,12 +66,17 @@
               >
             </p>
             <div class="hero-btns">
-              <a
-                href="bookASession.html"
-                class="btn-primary"
-                style="background: #fffbdd; color: #1a1a2e"
-                >Book a Session</a
-              >
+              <a href="bookASession.html" class="blob-btn blob-btn--cream">
+                Book a Session
+                <span class="blob-btn__inner">
+                  <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </a>
             </div>
           </div>
           <div class="hero-image">
@@ -77,7 +92,7 @@
         </div>
       </div>
 
-      <div class="section">
+      <div class="section fade-in">
         <div class="section-eyebrow">Why Whizdoo?</div>
         <h2>Turn complicated lessons into <em>Aha! moments</em></h2>
         <p class="section-sub">
@@ -172,14 +187,14 @@
         </div>
       </div>
 
-      <div class="quote-band">
+      <div class="quote-band fade-in">
         <blockquote>
           "A place where students are not just taught — but truly
           <em>seen, heard,</em> and believed in."
         </blockquote>
       </div>
 
-      <div class="offer-bg">
+      <div class="offer-bg fade-in">
         <div class="offer-inner">
           <div class="section-eyebrow">What We Offer</div>
           <h2
@@ -216,6 +231,24 @@
               </p>
             </div>
             <div class="offer-card">
+              <div class="offer-badge">Grade 11 & 12</div>
+              <h3>Senior High School</h3>
+              <p>
+                The stakes get higher, but so does our support. We help SHS
+                students tackle their core subjects and prepare for what comes
+                next — whether that's college or career.
+              </p>
+            </div>
+            <div class="offer-card">
+              <div class="offer-badge">Higher Level</div>
+              <h3>College</h3>
+              <p>
+                College gets tough, but you don't have to figure it out alone.
+                We help first to third year college students break down complex
+                topics and stay on top of their coursework.
+              </p>
+            </div>
+            <div class="offer-card">
               <div class="offer-badge">In-person & Online</div>
               <h3>Flexible Sessions</h3>
               <p>
@@ -227,7 +260,7 @@
         </div>
       </div>
 
-      <div class="book-bg">
+      <div class="book-bg fade-in">
         <div class="book-inner" style="text-align: center">
           <div class="section-eyebrow">Book a Session</div>
           <h2>Ready to get started?</h2>
@@ -238,11 +271,21 @@
             friendly conversation to see how we can help.
           </p>
           <br />
-          <a href="bookASession.html" class="btn-primary">Book a Session Now</a>
+          <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
         </div>
       </div>
 
-      <div class="test-bg">
+      <div class="test-bg fade-in">
         <div class="test-inner">
           <div class="section-eyebrow">Testimonials</div>
           <h2
@@ -289,7 +332,7 @@
         </div>
       </div>
 
-      <div class="faq-bg">
+      <div class="faq-bg fade-in">
         <div class="faq-inner">
           <div class="section-eyebrow">FAQs</div>
           <h2>Got questions?</h2>
@@ -358,6 +401,26 @@
         </div>
       </footer>
     </div>
+
+    <!-- This section added is for the blob button for the book a session buttons -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur
+            in="SourceGraphic"
+            result="blur"
+            stdDeviation="10"
+          ></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+            result="goo"
+          ></feColorMatrix>
+          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+        </filter>
+      </defs>
+    </svg>
 
     <script src="script.js"></script>
   </body>
