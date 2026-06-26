@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>About Whizdoo</title>
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+  <body>
+    <div class="wz">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div class="nav-name">Whiz<span>doo</span></div>
+        </a>
+
+        <button class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="tutors.html">Tutors</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+            <!-- <a href="bookASession.html" class="nav-btn">Book a Session</a> -->
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="about-hero">
+      <div class="about-hero-eyebrow">About Whizdoo</div>
+      <h2 class="about-hero-headline">
+        Every child is a genius —<br />they just need someone who
+        <em>actually listens.</em>
+      </h2>
+    </section>
+
+    <section class="split-section fade-in">
+      <div class="split-blue">
+        <div class="split-eyebrow">Our Mission</div>
+        <div class="split-divider"></div>
+        <h2>Turn complicated lessons into Aha! moments.</h2>
+        <p>
+          At Whizdoo, our mission is simple — turn complicated lessons into Aha!
+          moments your child will never forget. We believe in starting with the
+          basics and building up, because every strong learner begins with a
+          strong foundation.
+        </p>
+        <br />
+        <p>
+          No matter how tricky the subject — Math, Science, English, History, or
+          Filipino — we'll break it down in ways that make sense to your child.
+          We're here to connect, laugh, challenge, cheer on, and create moments
+          they'll carry for life.
+        </p>
+      </div>
+      <div class="split-cream">
+        <div class="split-eyebrow">Our Vision</div>
+        <div class="split-divider"></div>
+        <h2>
+          To become the first tutoring center that truly transforms students.
+        </h2>
+        <p>
+          Not just academically — but practically and personally. Where kids
+          apply what they learn, build real confidence, and grow into
+          future-ready thinkers who aren't afraid to ask, wonder, and explore.
+        </p>
+        <br />
+        <p>
+          We want to be remembered as the team who sparked their love for
+          learning, made them laugh while solving math, and helped them believe
+          in themselves when others didn't.
+        </p>
+      </div>
+    </section>
+
+    <div class="my-section fade-in">
+      <div class="supporting-quotes">
+        <div class="sq">
+          <p>"Learning should be an adventure, not a punishment."</p>
+          <span>Our core belief</span>
+        </div>
+        <div class="sq">
+          <p>
+            "We don't want students to remember formulas — we want them to
+            remember us."
+          </p>
+          <span>Our promise</span>
+        </div>
+        <div class="sq">
+          <p>
+            "Kids think like adults — they just don't always get the chance to
+            be heard."
+          </p>
+          <span>Why we started</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="elli-section fade-in">
+      <div class="elli-photo">
+        <img
+          src="images/86df066a-e18d-4458-8840-09bc02765231.jpg"
+          alt="Teacher Elli, Founder of Whizdoo"
+        />
+        <p>Elisha Terrazola</p>
+      </div>
+      <div class="elli-info">
+        <div class="elli-eyebrow">Meet the Founder</div>
+        <h2>Teacher Elli</h2>
+        <div class="elli-title">Founder, Whizdoo Learning Center</div>
+        <div class="elli-divider"></div>
+        <p>
+          Teacher Elli grew up believing that "ang bata ay pag-asa ng bayan"
+          isn't just a quote — it's a mission. With both a heart for education
+          and a gift for making learning feel light and fun, she set out to
+          create something different.
+        </p>
+        <p>
+          When she started really listening to students — hearing what makes
+          them curious, what confuses them, what they dream about — she realized
+          something powerful: kids think like adults. They just don't always get
+          the chance to be heard.
+        </p>
+        <p>
+          And so, Whizdoo was born. From the word "Wisdom" — with the mission to
+          grow wise, confident, and curious young learners.
+        </p>
+        <div class="elli-quote">
+          <p>
+            "I don't just want to teach. I want every child to walk away feeling
+            seen, heard, and believed in."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Whiz<span>doo</span></div>
+          <div class="footer-tagline">
+            Learning should never feel like a chore.
+          </div>
+        </div>
+        <div class="footer-right">
+          <a
+            href="https://www.facebook.com/share/1BFwo9ontp/ "
+            class="footer-fb"
+            >Follow us on Facebook</a
+          >
+          <p style="margin-top: 6px">
+            © 2025 Whizdoo Learning Center · Philippines
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

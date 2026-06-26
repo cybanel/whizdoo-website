@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Whizdoo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+  <body class="wz">
+    <div class="wz">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div class="nav-name">Whiz<span>doo</span></div>
+        </a>
+
+        <button class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="tutors.html">Tutors</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-header">
+      <div class="eyebrow">Get in Touch</div>
+      <h1>Contact Us</h1>
+      <p>
+        We'd love to hear from you. Reach out through any of the channels below
+        and we'll get back to you as soon as we can.
+      </p>
+    </div>
+
+    <div class="contact-section fade-in">
+      <div class="contact-card">
+        <div class="contact-icon blue">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">elighterra33@gmail.com</div>
+          <div class="contact-sub">We reply within 24 hours</div>
+        </div>
+        <!-- <a href="mailto:whizdoo@gmail.com">Send Email</a> -->
+      </div>
+
+      <div class="contact-card fb">
+        <div class="contact-icon yellow">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+            />
+          </svg>
+        </div>
+        <div class="contact-info">
+          <div class="contact-label">Facebook</div>
+          <div class="contact-value">Allison Terrazola</div>
+          <div class="contact-sub">Message us on Facebook</div>
+        </div>
+        <a href="https://www.facebook.com/share/1BFwo9ontp/" target="_blank"
+          >Visit Page</a
+        >
+      </div>
+
+      <div class="note-box">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        <p>
+          Our team is available Monday to Saturday. We look forward to hearing
+          from you!
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Whiz<span>doo</span></div>
+          <div class="footer-tagline">
+            Learning should never feel like a chore.
+          </div>
+        </div>
+        <div class="footer-right">
+          <a
+            href="https://www.facebook.com/share/1BFwo9ontp/ "
+            class="footer-fb"
+            >Follow us on Facebook</a
+          >
+          <p style="margin-top: 6px">
+            © 2025 Whizdoo Learning Center · Philippines
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

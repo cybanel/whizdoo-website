@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Whizdoo</title>
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+  <body>
+    <div class="wz">
+      <nav class="nav">
+        <a href="index.html" class="nav-brand">
+          <div class="nav-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <div class="nav-name">Whiz<span>doo</span></div>
+        </a>
+
+        <button class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="tutors.html">Tutors</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="bookASession.html" class="blob-btn blob-btn--blue">
+              Book a Session
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Added hero-wrapper <div> so that hero background color would stretch the whole screen -->
+      <!-- ☝🏼Don't forget to remove the closing tag when you are removing a tag -->
+      <div class="hero-wrapper">
+        <div class="hero">
+          <div class="hero-left">
+            <h1>
+              <a style="color: #ffffff">
+                We don't just teach — we make learning feel like
+                <em style="color: #ffffff">play.</em></a
+              >
+            </h1>
+            <p>
+              <a style="color: #ffffff">
+                From "I don't get it" to "Wait... that was actually fun!" —
+                Whizdoo turns complicated lessons into Aha! moments your child
+                will never forget.</a
+              >
+            </p>
+            <div class="hero-btns">
+              <a href="bookASession.html" class="blob-btn blob-btn--cream">
+                Book a Session
+                <span class="blob-btn__inner">
+                  <span class="blob-btn__blobs">
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                    <span class="blob-btn__blob"></span>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <!-- <svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg> -->
+            <img
+              src="images/heroPageImage.jpg"
+              alt="Teacher and student learning together"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="section fade-in">
+        <div class="section-eyebrow">Why Whizdoo?</div>
+        <h2>Turn complicated lessons into <em>Aha! moments</em></h2>
+        <p class="section-sub">
+          We're not here to lecture with boring slides or robotic drills. We
+          connect, laugh, challenge, and cheer — because the best lessons are
+          the ones your child actually remembers.
+        </p>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>Build a strong foundation</h3>
+            <p>
+              We start with the basics and build up, because every strong
+              learner begins with a strong foundation — no matter the subject.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                />
+              </svg>
+            </div>
+            <h3>Helps your child bounce back</h3>
+            <p>
+              Our tutors become your child's learning buddy — sharing in their
+              little wins and helping them bounce back from mistakes with a
+              smile.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <h3>Learning will never feel like a chore</h3>
+            <p>
+              With the right patience, motivation, and a dash of fun, we help
+              your child rediscover the joy of learning — again and again.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>An education experience they will never forget</h3>
+            <p>
+              It's not just about the lessons — it's about the experience. We
+              leave a mark on every student's learning history, making education
+              something they actually look back on fondly.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>
+              We transform students academically, practically, and personally
+            </h3>
+            <p>
+              Whizdoo goes beyond grades. We help students apply what they
+              learn, build real confidence, and grow into future-ready thinkers
+              — not just exam passers.
+            </p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3>We help students become independent learners</h3>
+            <p>
+              Our goal isn't to be needed forever. We equip students with the
+              tools, habits, and mindset to learn on their own — because real
+              success means they don't always need us.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote-band fade-in">
+        <!-- <blockquote>
+          "A place where students are not just taught — but truly
+          <em>seen, heard,</em> and believed in."
+        </blockquote> -->
+        <blockquote>
+          "A place where students are not just taught — but truly seen, heard,
+          and believed in."
+        </blockquote>
+      </div>
+
+      <div class="offer-bg fade-in">
+        <div class="offer-inner">
+          <div class="section-eyebrow">What We Offer</div>
+          <h2
+            style="
+              font-size: clamp(1.5rem, 2.5vw, 2rem);
+              font-weight: 800;
+              color: #1a1a2e;
+              letter-spacing: -0.3px;
+              margin-bottom: 0.6rem;
+            "
+          >
+            Programs built for
+            <em style="color: #e6a817; font-style: normal">every learner</em>
+          </h2>
+          <p class="section-sub">
+            Mainly in-person tutoring with flexible online options available. We
+            meet your child wherever they are.
+          </p>
+          <div class="offer-grid">
+            <div class="offer-card">
+              <div class="offer-badge">Grade 3 – 6</div>
+              <h3>Elementary</h3>
+              <p>
+                Building curiosity and confidence early. We break down concepts
+                in ways that make sense to young minds.
+              </p>
+            </div>
+            <div class="offer-card">
+              <div class="offer-badge">Grade 7 – 10</div>
+              <h3>Junior High School</h3>
+              <p>
+                Navigating harder subjects together. From algebra to biology, we
+                make it click before exam season hits.
+              </p>
+            </div>
+            <div class="offer-card">
+              <div class="offer-badge">Grade 11 & 12</div>
+              <h3>Senior High School</h3>
+              <p>
+                The stakes get higher, but so does our support. We help SHS
+                students tackle their core subjects and prepare for what comes
+                next — whether that's college or career.
+              </p>
+            </div>
+            <div class="offer-card">
+              <div class="offer-badge">Higher Level</div>
+              <h3>College</h3>
+              <p>
+                College gets tough, but you don't have to figure it out alone.
+                We help first to third year college students break down complex
+                topics and stay on top of their coursework.
+              </p>
+            </div>
+            <div class="offer-card">
+              <div class="offer-badge">In-person & Online</div>
+              <h3>Flexible Sessions</h3>
+              <p>
+                Can't meet in person? No problem. We offer online sessions that
+                are just as effective and engaging.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="book-bg fade-in">
+        <div class="book-inner" style="text-align: center">
+          <div class="section-eyebrow">Book a Session</div>
+          <h2>Ready to get started?</h2>
+          <p>
+            Getting your child started with Whizdoo is simple. Just send us a
+            message and we'll get back to you within 24 hours to find the
+            perfect session for your child. No pressure, no commitments — just a
+            friendly conversation to see how we can help.
+          </p>
+          <br />
+          <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="test-bg fade-in">
+        <div class="test-inner">
+          <div class="section-eyebrow">Testimonials</div>
+          <h2
+            style="
+              font-size: clamp(1.5rem, 2.5vw, 2rem);
+              font-weight: 800;
+              color: #1a1a2e;
+              letter-spacing: -0.3px;
+              margin-bottom: 0.6rem;
+            "
+          >
+            What parents are saying
+          </h2>
+          <p class="section-sub">Real families, real results.</p>
+          <div class="test-grid">
+            <div class="test-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                Thank you for your patience, dedication, and commitment to Zia's
+                learning journey. We truly appreciate the time and effort you
+                invest in every session. Zia enjoys her lessons and is always
+                happy after each class. We appreciate all that you do!
+              </p>
+              <div class="test-author">— Grade 7 parent</div>
+            </div>
+            <div class="test-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                "Teacher Elli really listens. My daughter finally feels
+                confident in school and it's all because someone actually
+                believed in her."
+              </p>
+              <div class="test-author">— Parent of a Grade 8 student</div>
+            </div>
+            <div class="test-card">
+              <div class="stars">★★★★★</div>
+              <p>
+                "The online sessions are just as good as in-person. Very
+                flexible and my child actually looks forward to every session
+                now."
+              </p>
+              <div class="test-author">— Parent of a Grade 9 student</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-bg fade-in">
+        <div class="faq-inner">
+          <div class="section-eyebrow">FAQs</div>
+          <h2>Got questions?</h2>
+          <p class="section-sub">
+            Here are some of the most common things parents ask us.
+          </p>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggle(this)">
+              What grade levels do you accept? <span>+</span>
+            </button>
+            <div class="faq-a">
+              We currently accept students from Grade 3 up to Grade 12 (Senior
+              High School), as well as College students looking for support in
+              their mathematics subjects.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggle(this)">
+              Do you offer online classes? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Yes! While we mainly offer in-person sessions, we can absolutely
+              accommodate online classes especially if location is not viable.
+              Just let us know when you reach out.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggle(this)">
+              What subjects do you cover? <span>+</span>
+            </button>
+            <div class="faq-a">
+              We cover core subjects including Mathematics, Science, English,
+              History, and Filipino. For Senior High and College levels, we also
+              offer specialized sessions in Trigonometry, Physics, Calculus,
+              Algebra, and Math Plus.
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" onclick="toggle(this)">
+              How do I book a session? <span>+</span>
+            </button>
+            <div class="faq-a">
+              Simply fill out the contact form above or send us a message on
+              Facebook. We'll get back to you within 24 hours to discuss your
+              child's needs and schedule your first session.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <div class="footer-logo">Whiz<span>doo</span></div>
+            <div class="footer-tagline">
+              Learning should never feel like a chore.
+            </div>
+          </div>
+          <div class="footer-right">
+            <a
+              href="https://www.facebook.com/share/1BFwo9ontp/ "
+              class="footer-fb"
+              >Follow us on Facebook</a
+            >
+            <p style="margin-top: 6px">
+              © 2025 Whizdoo Learning Center · Philippines
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- This section added is for the blob button for the book a session buttons -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur
+            in="SourceGraphic"
+            result="blur"
+            stdDeviation="10"
+          ></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+            result="goo"
+          ></feColorMatrix>
+          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+
+    <script src="script.js"></script>
+  </body>
+</html>

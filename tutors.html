@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tutors</title>
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+  <body>
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <div class="nav-name">Whiz<span>doo</span></div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutors.html">Tutors</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a></li>
+      </ul>
+    </nav>
+
+    <div class="page-header">
+      <div class="eyebrow">The Whizdoo Team</div>
+      <h1>Meet Our Tutors</h1>
+      <p>
+        Real teachers who genuinely care. Get to know the people who will be
+        your child's learning buddies.
+      </p>
+    </div>
+
+    <div class="tutors-wrapper">
+      <!-- TUTOR 1 — Elli, photo left -->
+      <div class="tutor-item fade-in">
+        <div class="tutor-photo-wrap">
+          <div class="tutor-photo">
+            <img
+              src="images/20b12716-bd6b-4d9d-a243-32b3a2b6f5c1.jpg"
+              alt="Teacher Elli"
+            />
+          </div>
+          <div class="tutor-line"></div>
+        </div>
+        <div class="tutor-info">
+          <div class="tutor-tag">Founder & Lead Tutor</div>
+          <h2>Teacher Elli</h2>
+          <div class="tutor-role">Whizdoo Learning Center</div>
+          <div class="tutor-divider"></div>
+          <p class="tutor-bio">
+            I'm Teacher Elli, a dedicated private tutor with 2 years of
+            experience teaching students from Grades 3 to 10 in subjects such as
+            English, Math, Science, History, and Tagalog. I create engaging,
+            personalized lessons that build confidence, strengthen academic
+            skills, and make learning enjoyable. I have worked with students
+            from homeschooling programs (The Learning Place), Xavier, Adventist
+            University of the Philippines and other schools in and around
+            Silang, Cavite
+          </p>
+
+          <p class="tutor-bio">Grade Levels: Grades 3–10</p>
+
+          <p class="tutor-bio">
+            Specialized Subjects: English, Filipino, Tagalog language, History,
+            Science and Basic Mathematics
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/share/1BFwo9ontp/ "
+              class="social-btn fb"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+              Facebook
+            </a>
+            <a
+              href="https://www.linkedin.com/in/elisha-terrazola-703954235/
+"
+              class="social-btn li"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTOR 2 — photo right -->
+      <div class="tutor-item reverse fade-in">
+        <div class="tutor-photo-wrap">
+          <div class="tutor-photo">
+            <img
+              src="images/fb637a87-311d-45b9-9494-25c11c08c9a9 (1).jpg"
+              alt="Teacher Elli"
+            />
+          </div>
+          <div class="tutor-line"></div>
+        </div>
+        <div class="tutor-info">
+          <div class="tutor-tag">Mathematics instructor and Tutor</div>
+          <h2>Teacher Llise</h2>
+          <div class="tutor-role">Whizdoo Learning Center</div>
+          <div class="tutor-divider"></div>
+          <p class="tutor-bio">
+            I am Teacher Llise, a dedicated Math and Physics instructor with 6
+            years of experience. I specialize in breaking down complex topics
+            into simple, engaging, and tailored lessons. My goal is to build my
+            students' confidence, critical thinking, and academic success in a
+            positive learning environment.
+          </p>
+
+          <p class="tutor-bio">
+            Grade Levels: Senior High & College level (all levels)
+          </p>
+
+          <p class="tutor-bio">
+            Specialized Subjects: Trigonometry, Physics, Calculus, Algebra, and
+            Math Plus
+          </p>
+
+          <!-- <p style="font-size: 13px; color: #888; margin-top: 0.5rem">
+            📧 honeybeemysteria@gmail.com
+          </p> -->
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/EZMathPH"
+              class="social-btn fb"
+              target="_blank"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+              Facebook
+            </a>
+            <a
+              href="https://www.tiktok.com/@ezmathph"
+              class="social-btn tk"
+              target="_blank"
+            >
+              <svg viewBox="0 0 24 24">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg>
+              TikTok
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTOR 3 — photo left, 3 social links -->
+      <!-- <div class="tutor-item">
+        <div class="tutor-photo-wrap">
+          <div class="tutor-photo">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>Tutor 3's photo here</span>
+          </div>
+          <div class="tutor-line"></div>
+        </div>
+        <div class="tutor-info">
+          <div class="tutor-tag">Tutor</div>
+          <h2>Teacher [Name]</h2>
+          <div class="tutor-role">Whizdoo Learning Center</div>
+          <div class="tutor-divider"></div>
+          <p class="tutor-bio">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn fb">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+              Facebook
+            </a>
+            <a href="#" class="social-btn ig">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- TUTOR 3 — Elli, photo left -->
+      <div class="tutor-item fade-in">
+        <div class="tutor-photo-wrap">
+          <div class="tutor-photo">
+            <img src="images/tutor-3.jpg" alt="Teacher Cae" />
+          </div>
+          <div class="tutor-line"></div>
+        </div>
+        <div class="tutor-info">
+          <div class="tutor-tag">Creative Storytelling Private Tutor</div>
+          <h2>Teacher Cae</h2>
+          <div class="tutor-role">Whizdoo Learning Center</div>
+          <div class="tutor-divider"></div>
+          <p class="tutor-bio">
+            I am Teacher Cae, a dedicated private tutor with extensive
+            experience in assisting students from nursery to Grade 2. I
+            specialize in designing creative and engaging learning strategies
+            that make lessons easier to understand and more enjoyable for young
+            learners. My teaching approach emphasizes interactive activities,
+            storytelling, and practical examples, ensuring that students not
+            only grasp the concepts but also develop curiosity and confidence in
+            their studies. Through this work, I have cultivated strong skills in
+            patience, adaptability, and individualized instruction, enabling me
+            to support diverse learning needs and foster a positive educational
+            environment.
+          </p>
+
+          <p class="tutor-bio">Grade Levels: Kindergarten to Grade 2</p>
+
+          <p class="tutor-bio">
+            Specialized Subjects: English, Filipino, Araling Panlipunan, and
+            Science
+          </p>
+
+          <!-- <p style="font-size: 13px; color: #888; margin-top: 0.5rem">
+            📧 cmtvelasco@gmail.com
+          </p> -->
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/christlynemae.velasco"
+              class="social-btn fb"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                />
+              </svg>
+              Facebook
+            </a>
+            <!-- <a
+              href="https://www.linkedin.com/in/elisha-terrazola-703954235/
+"
+              class="social-btn li"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-band">
+      <h2>Want to meet us in person?</h2>
+      <p>Book a free consultation and find the right tutor for your child.</p>
+      <a href="bookASession.html" class="cta-btn">Book a Session</a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">Whiz<span>doo</span></div>
+          <div class="footer-tagline">
+            Learning should never feel like a chore.
+          </div>
+        </div>
+        <div class="footer-right">
+          <a
+            href="https://www.facebook.com/share/1BFwo9ontp/ "
+            class="footer-fb"
+            >Follow us on Facebook</a
+          >
+          <p style="margin-top: 6px">
+            © 2025 Whizdoo Learning Center · Philippines
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
