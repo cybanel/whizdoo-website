@@ -1615,7 +1615,6 @@ h3 {
   line-height: 1;
 
   overflow: hidden; /* this clips any blob corners that escape */
-
 }
 
 .blob-btn--blue {
@@ -1628,11 +1627,9 @@ h3 {
   color: #1a1a2e;
   padding: 13px 28px;
   font-size: 15px;
-
 }
 .blob-btn--cream {
   color: #1a1a2e;
-
 }
 
 .blob-btn--blue:before {
@@ -1733,4 +1730,141 @@ h3 {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ─── BLOG PAGE ───────────────────────────────── */
+
+.blog-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem 10rem 2.5rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.blog-card {
+  display: flex;
+  align-items: stretch;
+  gap: 1.2rem;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #1a1a2e;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 250px; /* fixed card height */
+}
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.blog-card-text h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-text p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  display: -webkit-box;
+  /* For text clamp (how many lines before cutoff) */
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-date {
+  font-size: 12px;
+  font-weight: 700;
+  color: #4a90d9;
+  margin-top: auto;
+}
+
+.blog-card-photo {
+  width: 150 px;
+  height: 195px;
+  min-width: 170px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.blog-card-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* This is the note that pops up when the customer picks 'In-person'  */
+
+.info-note {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #a63232;
+  background-color: #fdf2f2;
+  border-left: 3px solid #de4c4c;
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* This is style for when the person in 'Book a SESSION' chooses in-person BUT THEY ARE NOT FROM SILANG */
+.warning-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #a63232;
+  background-color: #fdf2f2;
+  border-left: 3px solid #de4c4c;
+  padding: 10px 12px;
+  border-radius: 0 6px 6px 0;
+  line-height: 1.4;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Adds a little space between the text and the dropdown box on the same line */
+#location-check-container label {
+  margin-right: 12px; /* Adjust this number to add more or less space side-by-side */
+  display: inline-block; /* Ensures the margin applies correctly while keeping them side-by-side */
+}
+
+/* asdadsf */
+/* Container box that bundles the commute note and address field together */
+.important-notice-box {
+  background-color: #fffbdd;
+  border: 1px solid #e6d97a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(230, 217, 122, 0.15);
 }

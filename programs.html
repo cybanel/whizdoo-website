@@ -8,14 +8,23 @@
   </head>
 
   <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-    </filter>
-  </defs>
-</svg>
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="10"
+        ></feGaussianBlur>
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+          result="goo"
+        ></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+      </filter>
+    </defs>
+  </svg>
 
   <body class="wz">
     <div class="pg">
@@ -38,26 +47,25 @@
         </button>
 
         <ul class="nav-links" id="nav-links">
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="tutors.html">Tutors</a></li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-
             <a href="bookASession.html" class="blob-btn blob-btn--blue">
-            Book a Session
-            <span class="blob-btn__inner">
-              <span class="blob-btn__blobs">
-                <span class="blob-btn__blob"></span>
-                <span class="blob-btn__blob"></span>
-                <span class="blob-btn__blob"></span>
-                <span class="blob-btn__blob"></span>
+              Book a Session
+              <span class="blob-btn__inner">
+                <span class="blob-btn__blobs">
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                  <span class="blob-btn__blob"></span>
+                </span>
               </span>
-            </span>
-          </a>
+            </a>
 
-            <a href="bookASession.html" class="nav-btn">Book a Session</a>
-
+            <!-- <a href="bookASession.html" class="nav-btn">Book a Session</a> -->
           </li>
         </ul>
       </nav>
@@ -330,7 +338,17 @@
       <div class="cta-band fade-in">
         <h2>Ready to get your child started?</h2>
         <p>Reach out today and let's find the right program for your child.</p>
-        <a href="bookASession.html" class="cta-btn">Book a Session</a>
+        <a href="bookASession.html" class="blob-btn blob-btn--cream">
+          Book a Session
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </a>
       </div>
 
       <footer class="footer">
