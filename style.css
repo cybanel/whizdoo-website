@@ -1594,15 +1594,15 @@ h3 {
 .blob-btn {
   z-index: 1;
   position: relative;
-<<<<<<< HEAD
+
   text-align: center;
   text-decoration: none;
-=======
+
   padding: 9px 20px;
   text-align: center;
   text-decoration: none;
   font-size: 14px;
->>>>>>> bd8d14763a026d1e868fd312663d4235df93e780
+
   font-weight: 700;
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: transparent;
@@ -1613,15 +1613,14 @@ h3 {
   transition: color 0.5s;
   display: inline-block;
   line-height: 1;
-<<<<<<< HEAD
+
   overflow: hidden; /* this clips any blob corners that escape */
-=======
->>>>>>> bd8d14763a026d1e868fd312663d4235df93e780
+
 }
 
 .blob-btn--blue {
   color: #fff;
-<<<<<<< HEAD
+
   padding: 13px 28px;
   font-size: 15px;
 }
@@ -1629,11 +1628,11 @@ h3 {
   color: #1a1a2e;
   padding: 13px 28px;
   font-size: 15px;
-=======
+
 }
 .blob-btn--cream {
   color: #1a1a2e;
->>>>>>> bd8d14763a026d1e868fd312663d4235df93e780
+
 }
 
 .blob-btn--blue:before {
