@@ -164,13 +164,14 @@
             id="location-check-container"
             style="display: none; margin-top: 12px"
           >
-            <label for="is-in-silang" style="font-weight: 600; font-size: 14px"
-              >Is your location within Silang, Cavite?</label
-            >
-            <select id="is-in-silang" name="Is Within Silang Cavite">
+            <label style="font-weight: 600; font-size: 14px">
+              Is your location within any of the following areas: Silang,
+              Tagaytay, Nuvali, or Calamba?
+            </label>
+            <select id="is-in-silang" name="Is Within Service Area">
               <option value="" disabled selected>Select an option</option>
-              <option value="Yes">Yes, I am from Silang</option>
-              <option value="No">No, I am outside Silang</option>
+              <option value="Yes">Yes, I am from one of these areas</option>
+              <option value="No">No, I am outside these areas</option>
             </select>
           </div>
 
@@ -179,65 +180,108 @@
             class="important-notice-box"
             style="display: none; margin-top: 16px"
           >
-            <!-- Commute Fee Note -->
             <div
               id="commute-note"
-              style="font-size: 13px; color: #92740a; line-height: 1.4"
+              style="
+                font-size: 13px;
+                color: #92740a;
+                line-height: 1.4;
+                margin-bottom: 16px;
+              "
             >
               📌 <strong>Important Notice:</strong> In-person tutoring includes
               tutor commute fees, which vary depending on your location.
             </div>
 
-            <!-- Address Fields Grid -->
-            <div style="margin-top: 16px">
-              <!-- Row 1: House Number / Street & Barangay -->
-              <div class="form-row" style="margin-bottom: 1rem">
-                <div class="form-group" style="margin-bottom: 0">
-                  <label
-                    for="addr-house"
-                    style="font-weight: 700; font-size: 13px; color: #1a1a2e"
-                  >
-                    House No. / Street / Subd / Bldg
-                  </label>
-                  <input
-                    type="text"
-                    id="addr-house"
-                    name="Address Line 1"
-                    placeholder="e.g. Blk 4 Lot 2, Longos St."
-                    style="border-color: #e6d97a"
-                  />
-                </div>
-                <div class="form-group" style="margin-bottom: 0">
-                  <label
-                    for="addr-barangay"
-                    style="font-weight: 700; font-size: 13px; color: #1a1a2e"
-                  >
-                    Barangay
-                  </label>
-                  <input
-                    type="text"
-                    id="addr-barangay"
-                    name="Barangay"
-                    placeholder="e.g. San Miguel"
-                    style="border-color: #e6d97a"
-                  />
-                </div>
-              </div>
+            <div class="form-group" style="margin-bottom: 1rem">
+              <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                >Building / Condo Name & Unit No. (if applicable)</label
+              >
+              <input
+                type="text"
+                id="addr-building"
+                name="Building or Condo"
+                placeholder="e.g. Unit 4B, Avida Towers"
+              />
+            </div>
 
-              <!-- Row 2: Nearest Landmark -->
+            <div class="form-row" style="margin-bottom: 1rem">
               <div class="form-group" style="margin-bottom: 0">
-                <label
-                  for="addr-landmark"
-                  style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >House No. / Street / Subdivision</label
                 >
-                  Nearest Landmark
-                </label>
+                <input
+                  type="text"
+                  id="addr-house"
+                  name="Address Line 1"
+                  placeholder="e.g. Blk 4 Lot 2, Longos St."
+                  required
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >Barangay</label
+                >
+                <input
+                  type="text"
+                  id="addr-barangay"
+                  name="Barangay"
+                  placeholder="e.g. San Miguel"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row" style="margin-bottom: 1rem">
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >City / Municipality</label
+                >
+                <input
+                  type="text"
+                  id="addr-city"
+                  name="City or Municipality"
+                  placeholder="e.g. Silang"
+                  required
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >Province / Region</label
+                >
+                <input
+                  type="text"
+                  id="addr-province"
+                  name="Province or Region"
+                  placeholder="e.g. Cavite"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row" style="margin-bottom: 1rem">
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >Postal / ZIP Code</label
+                >
+                <input
+                  type="text"
+                  id="addr-postal"
+                  name="Postal Code"
+                  placeholder="e.g. 4118"
+                  required
+                />
+              </div>
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >Nearest Landmark</label
+                >
                 <input
                   type="text"
                   id="addr-landmark"
                   name="Nearest Landmark"
-                  placeholder="e.g. Near Silang Public Market / San Salvador Church"
-                  style="border-color: #e6d97a"
+                  placeholder="e.g. Near Silang Public Market"
+                  required
                 />
               </div>
             </div>
@@ -246,19 +290,20 @@
           <div
             id="out-of-bounds-note"
             class="warning-note"
-            style="display: none"
+            style="display: none; margin-top: 12px"
           >
-            ⚠️ Sorry! Our In-Person tutoring is exclusive to Silang, Cavite due
-            to tutor availability. We have switched your session preference to
+            ⚠️ Sorry! Our In-Person tutoring is currently only available in
+            <strong>Silang, Tagaytay, Nuvali, and Calamba</strong>. If you are
+            outside these areas, you may switch your session preference to
             <strong>Online Tutoring</strong> so we can still accommodate your
             child!
           </div>
         </div>
-        <!-- </div> -->
 
         <div class="form-group">
           <label>Subject/s Needed</label>
           <div class="checkbox-group">
+            <div class="subject-category">General Subjects</div>
             <label class="checkbox-item">
               <input
                 type="checkbox"
@@ -283,6 +328,10 @@
               <input type="checkbox" class="subject-check" value="Filipino" />
               Filipino
             </label>
+
+            <div class="subject-category" style="margin-top: 1rem">
+              College Level — Math & Sciences
+            </div>
             <label class="checkbox-item">
               <input
                 type="checkbox"
@@ -308,7 +357,6 @@
               Physics
             </label>
           </div>
-          <!-- This hidden input is what actually gets sent -->
           <input type="hidden" name="Subjects" id="subjects-hidden" />
         </div>
 

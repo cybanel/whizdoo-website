@@ -39,13 +39,99 @@ document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 /* Logic for book a session where the customer chooses -in person tutoring BUT THEY ARE NOT FROM SILANG*/
 
 //Please review this
-document.querySelector("form").addEventListener("submit", function () {
-  const checked = [...document.querySelectorAll(".subject-check:checked")]
-    .map((cb) => cb.value)
-    .join(", ");
-  document.getElementById("subjects-hidden").value = checked;
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const silangVal = document.getElementById("is-in-silang").value;
+  const sessionVal = document.getElementById("session").value;
+
+  if (sessionVal === "In-Person" && silangVal === "No") {
+    alert(
+      "⚠️ We cannot accommodate your location for In-Person tutoring. Please switch your session preference to Online to continue.",
+    );
+    return;
+  }
+
+  const confirmed = confirm(
+    "Please review your details before sending. Have you filled in everything correctly?",
+  );
+
+  if (confirmed) {
+    const checked = [...document.querySelectorAll(".subject-check:checked")]
+      .map((cb) => cb.value)
+      .join(", ");
+    document.getElementById("subjects-hidden").value = checked;
+    this.submit();
+  }
 });
 
+// Location restriction logic
+// const sessionSelect = document.getElementById("session");
+// const locationContainer = document.getElementById("location-check-container");
+// const silangSelect = document.getElementById("is-in-silang");
+// const silangDetailsContainer = document.getElementById(
+//   "silang-details-container",
+// );
+// const outOfBoundsNote = document.getElementById("out-of-bounds-note");
+
+// // Get our three new address inputs
+// const addrHouse = document.getElementById("addr-house");
+// const addrBarangay = document.getElementById("addr-barangay");
+// const addrLandmark = document.getElementById("addr-landmark");
+
+// function toggleAddressFields(isRequired) {
+//   if (isRequired) {
+//     addrHouse.setAttribute("required", "required");
+//     addrBarangay.setAttribute("required", "required");
+//     addrLandmark.setAttribute("required", "required");
+//   } else {
+//     addrHouse.removeAttribute("required");
+//     addrBarangay.removeAttribute("required");
+//     addrLandmark.removeAttribute("required");
+//     // Clear values safely
+//     addrHouse.value = "";
+//     addrBarangay.value = "";
+//     addrLandmark.value = "";
+//   }
+// }
+
+// Track changes on the primary session dropdown
+// sessionSelect.addEventListener("change", function () {
+//   if (this.value === "In-Person") {
+//     locationContainer.style.display = "block";
+//     silangSelect.setAttribute("required", "required");
+//     outOfBoundsNote.style.display = "none";
+//   } else {
+//     // Reset everything if they choose "Online"
+//     locationContainer.style.display = "none";
+//     silangDetailsContainer.style.display = "none";
+//     outOfBoundsNote.style.display = "none";
+//     silangSelect.removeAttribute("required");
+//     silangSelect.value = "";
+//     toggleAddressFields(false);
+//   }
+// });
+
+// Track changes on the Silang location verification dropdown
+// silangSelect.addEventListener("change", function () {
+//   if (this.value === "Yes") {
+//     silangDetailsContainer.style.display = "block";
+//     toggleAddressFields(true); // Makes all 3 parts mandatory
+//     outOfBoundsNote.style.display = "none";
+//   } else if (this.value === "No") {
+//     silangDetailsContainer.style.display = "none";
+//     toggleAddressFields(false);
+//     outOfBoundsNote.style.display = "block";
+
+//     // Wait 3.5 seconds, then auto-revert to Online
+//     setTimeout(() => {
+//       sessionSelect.value = "Online";
+//       sessionSelect.dispatchEvent(new Event("change"));
+//     }, 3500);
+//   }
+// });
+
+// Location restriction logic
 // Location restriction logic
 const sessionSelect = document.getElementById("session");
 const locationContainer = document.getElementById("location-check-container");
@@ -55,35 +141,42 @@ const silangDetailsContainer = document.getElementById(
 );
 const outOfBoundsNote = document.getElementById("out-of-bounds-note");
 
-// Get our three new address inputs
+const addrBuilding = document.getElementById("addr-building");
 const addrHouse = document.getElementById("addr-house");
 const addrBarangay = document.getElementById("addr-barangay");
+const addrCity = document.getElementById("addr-city");
+const addrProvince = document.getElementById("addr-province");
+const addrPostal = document.getElementById("addr-postal");
 const addrLandmark = document.getElementById("addr-landmark");
 
 function toggleAddressFields(isRequired) {
+  const requiredFields = [
+    addrHouse,
+    addrBarangay,
+    addrCity,
+    addrProvince,
+    addrPostal,
+    addrLandmark,
+  ];
   if (isRequired) {
-    addrHouse.setAttribute("required", "required");
-    addrBarangay.setAttribute("required", "required");
-    addrLandmark.setAttribute("required", "required");
+    requiredFields.forEach((f) => f.setAttribute("required", "required"));
   } else {
-    addrHouse.removeAttribute("required");
-    addrBarangay.removeAttribute("required");
-    addrLandmark.removeAttribute("required");
-    // Clear values safely
-    addrHouse.value = "";
-    addrBarangay.value = "";
-    addrLandmark.value = "";
+    requiredFields.forEach((f) => {
+      f.removeAttribute("required");
+      f.value = "";
+    });
+    if (addrBuilding) addrBuilding.value = "";
   }
 }
 
-// Track changes on the primary session dropdown
 sessionSelect.addEventListener("change", function () {
   if (this.value === "In-Person") {
     locationContainer.style.display = "block";
     silangSelect.setAttribute("required", "required");
     outOfBoundsNote.style.display = "none";
+    silangDetailsContainer.style.display = "none";
+    toggleAddressFields(false);
   } else {
-    // Reset everything if they choose "Online"
     locationContainer.style.display = "none";
     silangDetailsContainer.style.display = "none";
     outOfBoundsNote.style.display = "none";
@@ -93,21 +186,15 @@ sessionSelect.addEventListener("change", function () {
   }
 });
 
-// Track changes on the Silang location verification dropdown
 silangSelect.addEventListener("change", function () {
   if (this.value === "Yes") {
     silangDetailsContainer.style.display = "block";
-    toggleAddressFields(true); // Makes all 3 parts mandatory
+    toggleAddressFields(true);
     outOfBoundsNote.style.display = "none";
   } else if (this.value === "No") {
     silangDetailsContainer.style.display = "none";
     toggleAddressFields(false);
     outOfBoundsNote.style.display = "block";
-
-    // Wait 3.5 seconds, then auto-revert to Online
-    setTimeout(() => {
-      sessionSelect.value = "Online";
-      sessionSelect.dispatchEvent(new Event("change"));
-    }, 3500);
+    // No auto-switch — the warning just shows and stays
   }
 });

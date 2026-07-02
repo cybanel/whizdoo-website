@@ -1868,3 +1868,21 @@ h3 {
   padding: 1.5rem;
   box-shadow: 0 4px 12px rgba(230, 217, 122, 0.15);
 }
+
+/* the address thing design  */
+.important-notice-box {
+  background: #fffbdd;
+  border: 1px solid #e6d97a;
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+}
+
+.warning-note {
+  background: #fff3f3;
+  border: 1px solid #f5c6c6;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  font-size: 13px;
+  color: #922;
+  line-height: 1.7;
+}
