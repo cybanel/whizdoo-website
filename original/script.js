@@ -20,15 +20,6 @@ function toggleMenu() {
   links.classList.toggle("open");
 }
 
-/* for Programs dropdown on mobile (tap to open/close) */
-document.querySelectorAll(".nav-dropdown-toggle").forEach((toggle) => {
-  toggle.addEventListener("click", function () {
-    if (window.innerWidth <= 768) {
-      this.parentElement.classList.toggle("open");
-    }
-  });
-});
-
 /* for fade in animation while scrolling */
 /* fade in on scroll */
 const observer = new IntersectionObserver(
@@ -145,15 +136,14 @@ document.querySelector("form").addEventListener("submit", function (e) {
 const sessionSelect = document.getElementById("session");
 const locationContainer = document.getElementById("location-check-container");
 const silangSelect = document.getElementById("is-in-silang");
-const meetingTypeContainer = document.getElementById("meeting-type-container");
-const meetingTypeSelect = document.getElementById("meeting-type");
 const silangDetailsContainer = document.getElementById(
   "silang-details-container",
 );
 const outOfBoundsNote = document.getElementById("out-of-bounds-note");
 
+const addrBuilding = document.getElementById("addr-building");
+const addrHouse = document.getElementById("addr-house");
 const addrBarangay = document.getElementById("addr-barangay");
-const addrVillage = document.getElementById("addr-village");
 const addrCity = document.getElementById("addr-city");
 const addrProvince = document.getElementById("addr-province");
 const addrPostal = document.getElementById("addr-postal");
@@ -161,6 +151,7 @@ const addrLandmark = document.getElementById("addr-landmark");
 
 function toggleAddressFields(isRequired) {
   const requiredFields = [
+    addrHouse,
     addrBarangay,
     addrCity,
     addrProvince,
@@ -174,16 +165,8 @@ function toggleAddressFields(isRequired) {
       f.removeAttribute("required");
       f.value = "";
     });
-    if (addrVillage) addrVillage.value = "";
+    if (addrBuilding) addrBuilding.value = "";
   }
-}
-
-function resetMeetingType() {
-  meetingTypeContainer.style.display = "none";
-  meetingTypeSelect.removeAttribute("required");
-  meetingTypeSelect.value = "";
-  silangDetailsContainer.style.display = "none";
-  toggleAddressFields(false);
 }
 
 sessionSelect.addEventListener("change", function () {
@@ -191,34 +174,27 @@ sessionSelect.addEventListener("change", function () {
     locationContainer.style.display = "block";
     silangSelect.setAttribute("required", "required");
     outOfBoundsNote.style.display = "none";
-    resetMeetingType();
+    silangDetailsContainer.style.display = "none";
+    toggleAddressFields(false);
   } else {
     locationContainer.style.display = "none";
+    silangDetailsContainer.style.display = "none";
     outOfBoundsNote.style.display = "none";
     silangSelect.removeAttribute("required");
     silangSelect.value = "";
-    resetMeetingType();
+    toggleAddressFields(false);
   }
 });
 
 silangSelect.addEventListener("change", function () {
   if (this.value === "Yes") {
-    meetingTypeContainer.style.display = "block";
-    meetingTypeSelect.setAttribute("required", "required");
-    outOfBoundsNote.style.display = "none";
-  } else if (this.value === "No") {
-    resetMeetingType();
-    outOfBoundsNote.style.display = "block";
-    // No auto-switch — the warning just shows and stays
-  }
-});
-
-meetingTypeSelect.addEventListener("change", function () {
-  if (this.value === "Home-setup" || this.value === "Public place") {
     silangDetailsContainer.style.display = "block";
     toggleAddressFields(true);
-  } else {
+    outOfBoundsNote.style.display = "none";
+  } else if (this.value === "No") {
     silangDetailsContainer.style.display = "none";
     toggleAddressFields(false);
+    outOfBoundsNote.style.display = "block";
+    // No auto-switch — the warning just shows and stays
   }
 });

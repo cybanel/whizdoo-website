@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="10"
+        ></feGaussianBlur>
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+          result="goo"
+        ></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+
+  <body>
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <div class="nav-name">Whiz<span>doo</span></div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutors.html">Tutors</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Programs</span>
+          <ul class="nav-dropdown-menu">
+            <li><a href="programs.html">General Tutoring</a></li>
+            <li><a href="specialSessions.html">Special Sessions</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+          <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </li>
+
+        <!-- <li><a href="bookASession.html" class="nav-btn">Book a Session</a></li> -->
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -49,13 +49,7 @@
         <li><a href="blog.html">Blog</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="tutors.html">Tutors</a></li>
-        <li class="nav-dropdown">
-          <span class="nav-dropdown-toggle">Programs</span>
-          <ul class="nav-dropdown-menu">
-            <li><a href="programs.html">General Tutoring</a></li>
-            <li><a href="specialSessions.html">Special Sessions</a></li>
-          </ul>
-        </li>
+        <li><a href="programs.html">Programs</a></li>
         <li><a href="contact.html">Contact</a></li>
 
         <li>
@@ -135,16 +129,6 @@
           />
         </div>
 
-        <div class="form-group">
-          <label for="messenger">Messenger Link (optional)</label>
-          <input
-            type="text"
-            id="messenger"
-            name="Messenger Link"
-            placeholder="e.g. m.me/mariasantos"
-          />
-        </div>
-
         <!-- <div class="form-row"> -->
         <div class="form-group">
           <label for="grade">Child's Grade Level</label>
@@ -192,20 +176,6 @@
           </div>
 
           <div
-            id="meeting-type-container"
-            style="display: none; margin-top: 12px"
-          >
-            <label style="font-weight: 600; font-size: 14px">
-              Will this be a home setup or a public place?
-            </label>
-            <select id="meeting-type" name="Meeting Type">
-              <option value="" disabled selected>Select an option</option>
-              <option value="Home-setup">Home-setup</option>
-              <option value="Public place">Public place</option>
-            </select>
-          </div>
-
-          <div
             id="silang-details-container"
             class="important-notice-box"
             style="display: none; margin-top: 16px"
@@ -225,29 +195,44 @@
 
             <div class="form-group" style="margin-bottom: 1rem">
               <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
-                >Barangay</label
+                >Building / Condo Name & Unit No. (if applicable)</label
               >
               <input
                 type="text"
-                id="addr-barangay"
-                name="Barangay"
-                placeholder="e.g. San Miguel"
-                required
+                id="addr-building"
+                name="Building or Condo"
+                placeholder="e.g. Unit 4B, Avida Towers"
               />
             </div>
 
             <div class="form-row" style="margin-bottom: 1rem">
               <div class="form-group" style="margin-bottom: 0">
                 <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
-                  >Village (optional)</label
+                  >House No. / Street / Subdivision</label
                 >
                 <input
                   type="text"
-                  id="addr-village"
-                  name="Village"
-                  placeholder="e.g. Emerald Green Homes"
+                  id="addr-house"
+                  name="Address Line 1"
+                  placeholder="e.g. Blk 4 Lot 2, Longos St."
+                  required
                 />
               </div>
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >Barangay</label
+                >
+                <input
+                  type="text"
+                  id="addr-barangay"
+                  name="Barangay"
+                  placeholder="e.g. San Miguel"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row" style="margin-bottom: 1rem">
               <div class="form-group" style="margin-bottom: 0">
                 <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
                   >City / Municipality</label
@@ -260,9 +245,6 @@
                   required
                 />
               </div>
-            </div>
-
-            <div class="form-row" style="margin-bottom: 1rem">
               <div class="form-group" style="margin-bottom: 0">
                 <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
                   >Province / Region</label
@@ -275,6 +257,9 @@
                   required
                 />
               </div>
+            </div>
+
+            <div class="form-row" style="margin-bottom: 1rem">
               <div class="form-group" style="margin-bottom: 0">
                 <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
                   >Postal / ZIP Code</label
@@ -287,19 +272,18 @@
                   required
                 />
               </div>
-            </div>
-
-            <div class="form-group" style="margin-bottom: 0">
-              <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
-                >Nearest Landmark</label
-              >
-              <input
-                type="text"
-                id="addr-landmark"
-                name="Nearest Landmark"
-                placeholder="e.g. Near Silang Public Market"
-                required
-              />
+              <div class="form-group" style="margin-bottom: 0">
+                <label style="font-weight: 700; font-size: 13px; color: #1a1a2e"
+                  >Nearest Landmark</label
+                >
+                <input
+                  type="text"
+                  id="addr-landmark"
+                  name="Nearest Landmark"
+                  placeholder="e.g. Near Silang Public Market"
+                  required
+                />
+              </div>
             </div>
           </div>
 
