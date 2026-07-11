@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tell Us About Your Child</title>
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="10"
+        ></feGaussianBlur>
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+          result="goo"
+        ></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+
+  <body class="wz">
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <div class="nav-name">Whiz<span>doo</span></div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutors.html">Tutors</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Programs</span>
+          <ul class="nav-dropdown-menu">
+            <li><a href="programs.html">General Tutoring</a></li>
+            <li><a href="specialSessions.html">Special Sessions</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+          <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-header">
+      <div class="eyebrow">Before You Book</div>
+      <h1>Tell Us About Your Child</h1>
+      <p>
+        A few quick questions to help us understand what your child needs — this
+        takes about 2 minutes.
+      </p>
+    </div>
+
+    <div class="quiz-wrap">
+      <div class="quiz-progress-label" id="quiz-progress-label">
+        Step 1 of 8
+      </div>
+      <div class="quiz-progress-track">
+        <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+      </div>
+
+      <form
+        class="quiz-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="075a1621-3a29-4678-acf9-0060ed557a9c"
+        />
+        <input
+          type="hidden"
+          name="subject"
+          value="📋 New Child Assessment — Whizdoo"
+        />
+        <!-- BAGUHIN MO YUNG 'VALUE'  -->
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://cybanel.github.io/whizdoo-website/bookASession.html"
+        />
+
+        <!-- STEP 1: Contact Info -->
+        <div class="quiz-step">
+          <h2>Let's start with the basics</h2>
+          <p class="quiz-subtext">
+            So we know whose form this is when it lands in our inbox.
+          </p>
+          <div class="form-group">
+            <label for="parentName">Parent's Full Name</label>
+            <input type="text" id="parentName" name="Parent Name" required />
+          </div>
+          <div class="form-group">
+            <label for="childName">Child's Name</label>
+            <input type="text" id="childName" name="Child Name" required />
+          </div>
+          <div class="form-group">
+            <label for="parentEmail">Email Address</label>
+            <input type="email" id="parentEmail" name="Parent Email" required />
+          </div>
+        </div>
+
+        <!-- STEP 2: Subject -->
+        <div class="quiz-step">
+          <h2>Which subject is your child struggling with the most?</h2>
+          <div class="form-group">
+            <select id="subject" name="Subject" required>
+              <option value="" disabled selected>Select a subject</option>
+              <option>Mathematics</option>
+              <option>Science</option>
+              <option>English</option>
+              <option>History</option>
+              <option>Filipino</option>
+              <option>Trigonometry</option>
+              <option>Calculus</option>
+              <option>Algebra</option>
+              <option>Physics</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 3: What the struggle looks like -->
+        <div class="quiz-step">
+          <h2>What does that struggle actually look like?</h2>
+          <p class="quiz-subtext">Select all that apply.</p>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="struggle-check"
+                value="Loses focus / gets distracted easily"
+              />
+              Loses focus / gets distracted easily
+            </label>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="struggle-check"
+                value="Understands it in class but forgets during tests"
+              />
+              Understands it in class but forgets during tests
+            </label>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="struggle-check"
+                value="Avoids or feels anxious about the subject"
+              />
+              Avoids or feels anxious about the subject
+            </label>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="struggle-check"
+                value="Struggles with the basics/fundamentals"
+              />
+              Struggles with the basics/fundamentals
+            </label>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="struggle-check"
+                value="Makes careless mistakes despite understanding the material"
+              />
+              Makes careless mistakes despite understanding the material
+            </label>
+          </div>
+          <div class="form-group" style="margin-top: 1rem">
+            <label for="struggleOther">Other (optional)</label>
+            <input
+              type="text"
+              id="struggleOther"
+              placeholder="Anything not covered above?"
+            />
+          </div>
+          <input
+            type="hidden"
+            name="What the Struggle Looks Like"
+            id="struggle-hidden"
+          />
+        </div>
+
+        <!-- STEP 4: Duration -->
+        <div class="quiz-step">
+          <h2>How long has this been going on?</h2>
+          <div class="form-group">
+            <select id="duration" name="Duration" required>
+              <option value="" disabled selected>Select an option</option>
+              <option>Just recently</option>
+              <option>A few months</option>
+              <option>Most of the school year</option>
+              <option>As long as I can remember</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 5: Previous tutor -->
+        <div class="quiz-step">
+          <h2>Has your child had a tutor before for this subject?</h2>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="radio" name="prevTutor" value="Yes" required />
+              Yes
+            </label>
+            <label class="checkbox-item">
+              <input type="radio" name="prevTutor" value="No" required />
+              No
+            </label>
+          </div>
+          <div
+            class="form-group"
+            id="prev-tutor-notes-group"
+            style="display: none; margin-top: 1rem"
+          >
+            <label for="prevTutorNotes"
+              >What worked or didn't work? (optional)</label
+            >
+            <textarea
+              id="prevTutorNotes"
+              name="Previous Tutor Notes"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 6: What success looks like -->
+        <div class="quiz-step">
+          <h2>What would feel like a win to you?</h2>
+          <p class="quiz-subtext">
+            E.g. "catching up to grade level," "more confidence," "passing the
+            next exam."
+          </p>
+          <div class="form-group">
+            <textarea
+              id="successLooksLike"
+              name="Success Looks Like"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 7: Anything else (optional) -->
+        <div class="quiz-step">
+          <h2>Anything else you'd like the tutor to know?</h2>
+          <p class="quiz-subtext">
+            Totally optional — skip if nothing comes to mind.
+          </p>
+          <div class="form-group">
+            <textarea
+              id="additionalNotes"
+              name="Additional Notes"
+              placeholder="Optional"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- STEP 8: Summary -->
+        <div class="quiz-step">
+          <h2>Review your answers</h2>
+          <p class="quiz-subtext">
+            Here's what you told us. Hit submit when you're ready.
+          </p>
+
+          <div class="quiz-summary-item">
+            <div class="quiz-summary-label">Subject</div>
+            <div class="quiz-summary-value" id="summary-subject"></div>
+          </div>
+          <div class="quiz-summary-item">
+            <div class="quiz-summary-label">What the struggle looks like</div>
+            <div class="quiz-summary-value" id="summary-struggle"></div>
+          </div>
+          <div class="quiz-summary-item">
+            <div class="quiz-summary-label">Duration</div>
+            <div class="quiz-summary-value" id="summary-duration"></div>
+          </div>
+          <div class="quiz-summary-item">
+            <div class="quiz-summary-label">Previous tutor</div>
+            <div class="quiz-summary-value" id="summary-prevtutor"></div>
+          </div>
+          <div class="quiz-summary-item">
+            <div class="quiz-summary-label">What success looks like</div>
+            <div class="quiz-summary-value" id="summary-success"></div>
+          </div>
+
+          <button type="submit" class="submit-btn" style="margin-top: 1.6rem">
+            Submit Assessment
+          </button>
+          <p class="form-note">
+            Your answers will be sent directly to Whizdoo's email.
+          </p>
+        </div>
+
+        <div class="quiz-nav">
+          <button type="button" class="quiz-back-btn" id="quiz-back-btn">
+            ← Back
+          </button>
+          <button type="button" class="quiz-next-btn" id="quiz-next-btn">
+            Next
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Whiz<span>doo</span></div>
+          <div class="footer-tagline">
+            Learning should never feel like a chore.
+          </div>
+        </div>
+        <div class="footer-right">
+          <a href="https://www.facebook.com/Whizdoo" class="footer-fb"
+            >Follow us on Facebook</a
+          >
+          <p style="margin-top: 6px">
+            © 2025 Whizdoo Learning Center · Philippines
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+      const steps = document.querySelectorAll(".quiz-step");
+      const progressFill = document.getElementById("quiz-progress-fill");
+      const progressLabel = document.getElementById("quiz-progress-label");
+      const backBtn = document.getElementById("quiz-back-btn");
+      const nextBtn = document.getElementById("quiz-next-btn");
+      let current = 0;
+
+      function validateStep(i) {
+        switch (i) {
+          case 0:
+            return (
+              document.getElementById("parentName").value.trim() !== "" &&
+              document.getElementById("childName").value.trim() !== "" &&
+              document.getElementById("parentEmail").value.trim() !== ""
+            );
+          case 1:
+            return document.getElementById("subject").value !== "";
+          case 2:
+            return (
+              document.querySelectorAll(".struggle-check:checked").length > 0
+            );
+          case 3:
+            return document.getElementById("duration").value !== "";
+          case 4:
+            return (
+              document.querySelector('input[name="prevTutor"]:checked') !== null
+            );
+          case 5:
+            return (
+              document.getElementById("successLooksLike").value.trim() !== ""
+            );
+          default:
+            return true;
+        }
+      }
+
+      function populateSummary() {
+        document.getElementById("summary-subject").textContent =
+          document.getElementById("subject").value || "—";
+
+        const struggles = [
+          ...document.querySelectorAll(".struggle-check:checked"),
+        ].map((cb) => cb.value);
+        const otherStruggle = document
+          .getElementById("struggleOther")
+          .value.trim();
+        if (otherStruggle) struggles.push(otherStruggle);
+        document.getElementById("summary-struggle").textContent =
+          struggles.length ? struggles.join(", ") : "—";
+
+        document.getElementById("summary-duration").textContent =
+          document.getElementById("duration").value || "—";
+
+        const prevTutorRadio = document.querySelector(
+          'input[name="prevTutor"]:checked',
+        );
+        const prevTutorNotes = document
+          .getElementById("prevTutorNotes")
+          .value.trim();
+        document.getElementById("summary-prevtutor").textContent =
+          prevTutorRadio
+            ? prevTutorRadio.value +
+              (prevTutorNotes ? " — " + prevTutorNotes : "")
+            : "—";
+
+        document.getElementById("summary-success").textContent =
+          document.getElementById("successLooksLike").value.trim() || "—";
+      }
+
+      function showStep(i) {
+        steps.forEach((s) => s.classList.remove("active"));
+        steps[i].classList.add("active");
+
+        progressLabel.textContent = `Step ${i + 1} of ${steps.length}`;
+        progressFill.style.width = `${((i + 1) / steps.length) * 100}%`;
+
+        backBtn.style.display = i === 0 ? "none" : "inline-block";
+
+        if (i === steps.length - 1) {
+          nextBtn.style.display = "none";
+          populateSummary();
+        } else {
+          nextBtn.style.display = "inline-block";
+          nextBtn.textContent =
+            i === steps.length - 2 ? "Review Answers" : "Next";
+        }
+
+        nextBtn.disabled = !validateStep(i);
+      }
+
+      document
+        .querySelectorAll(
+          ".quiz-step input, .quiz-step select, .quiz-step textarea",
+        )
+        .forEach((el) => {
+          el.addEventListener("input", () => {
+            nextBtn.disabled = !validateStep(current);
+          });
+          el.addEventListener("change", () => {
+            nextBtn.disabled = !validateStep(current);
+          });
+        });
+
+      nextBtn.addEventListener("click", () => {
+        if (!validateStep(current)) return;
+        current++;
+        showStep(current);
+      });
+
+      backBtn.addEventListener("click", () => {
+        current--;
+        showStep(current);
+      });
+
+      document.querySelectorAll('input[name="prevTutor"]').forEach((radio) => {
+        radio.addEventListener("change", function () {
+          document.getElementById("prev-tutor-notes-group").style.display =
+            this.value === "Yes" ? "block" : "none";
+        });
+      });
+
+      document
+        .querySelector(".quiz-form")
+        .addEventListener("submit", function () {
+          const struggles = [
+            ...document.querySelectorAll(".struggle-check:checked"),
+          ].map((cb) => cb.value);
+          const otherStruggle = document
+            .getElementById("struggleOther")
+            .value.trim();
+          if (otherStruggle) struggles.push(otherStruggle);
+          document.getElementById("struggle-hidden").value =
+            struggles.join(", ");
+        });
+
+      showStep(current);
+    </script>
+  </body>
+</html>
