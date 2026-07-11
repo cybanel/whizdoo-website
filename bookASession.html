@@ -317,9 +317,20 @@
         </div>
 
         <div class="form-group">
-          <label>Subject/s Needed</label>
+          <label for="program">Preferred Program</label>
+          <select id="program" name="Program" required>
+            <option value="" disabled selected>Select a program</option>
+            <option value="General Tutoring">General Tutoring</option>
+            <option value="Special Sessions">Special Sessions</option>
+          </select>
+        </div>
+
+        <div
+          class="form-group"
+          id="general-subjects-container"
+          style="display: none"
+        >
           <div class="checkbox-group">
-            <p></p>
             <div class="subject-category">General Subjects</div>
             <label class="checkbox-item">
               <input
@@ -377,6 +388,48 @@
           <input type="hidden" name="Subjects" id="subjects-hidden" />
         </div>
 
+        <div
+          class="form-group"
+          id="special-subjects-container"
+          style="display: none"
+        >
+          <div class="subject-category">Special Sesssion Subjects</div>
+
+          <div class="checkbox-group">
+            <p></p>
+
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="special-subject-check"
+                value="Math"
+              />
+              Math
+            </label>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="special-subject-check"
+                value="English"
+              />
+              English
+            </label>
+            <label class="checkbox-item">
+              <input
+                type="checkbox"
+                class="special-subject-check"
+                value="Tagalog"
+              />
+              Tagalog
+            </label>
+          </div>
+          <input
+            type="hidden"
+            name="Special Session Subjects"
+            id="special-subjects-hidden"
+          />
+        </div>
+
         <div class="divider"></div>
 
         <div class="form-group">
@@ -415,14 +468,14 @@
       </div>
     </footer>
 
-    <script>
+    <!-- <script>
       document.querySelector("form").addEventListener("submit", function () {
         const checked = [...document.querySelectorAll(".subject-check:checked")]
           .map((cb) => cb.value)
           .join(", ");
         document.getElementById("subjects-hidden").value = checked;
       });
-    </script>
+    </script> -->
 
     <script src="script.js"></script>
   </body>

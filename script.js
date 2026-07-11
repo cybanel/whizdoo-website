@@ -66,10 +66,18 @@ document.querySelector("form").addEventListener("submit", function (e) {
   );
 
   if (confirmed) {
-    const checked = [...document.querySelectorAll(".subject-check:checked")]
+    const generalChecked = [
+      ...document.querySelectorAll(".subject-check:checked"),
+    ]
       .map((cb) => cb.value)
       .join(", ");
-    document.getElementById("subjects-hidden").value = checked;
+    const specialChecked = [
+      ...document.querySelectorAll(".special-subject-check:checked"),
+    ]
+      .map((cb) => cb.value)
+      .join(", ");
+    document.getElementById("subjects-hidden").value = generalChecked;
+    document.getElementById("special-subjects-hidden").value = specialChecked;
     this.submit();
   }
 });
@@ -151,6 +159,33 @@ const silangDetailsContainer = document.getElementById(
   "silang-details-container",
 );
 const outOfBoundsNote = document.getElementById("out-of-bounds-note");
+
+const programSelect = document.getElementById("program");
+const generalSubjectsContainer = document.getElementById(
+  "general-subjects-container",
+);
+const specialSubjectsContainer = document.getElementById(
+  "special-subjects-container",
+);
+
+programSelect.addEventListener("change", function () {
+  if (this.value === "General Tutoring") {
+    generalSubjectsContainer.style.display = "block";
+    specialSubjectsContainer.style.display = "none";
+    document
+      .querySelectorAll(".special-subject-check")
+      .forEach((cb) => (cb.checked = false));
+  } else if (this.value === "Special Sessions") {
+    specialSubjectsContainer.style.display = "block";
+    generalSubjectsContainer.style.display = "none";
+    document
+      .querySelectorAll(".subject-check")
+      .forEach((cb) => (cb.checked = false));
+  } else {
+    generalSubjectsContainer.style.display = "none";
+    specialSubjectsContainer.style.display = "none";
+  }
+});
 
 const addrBarangay = document.getElementById("addr-barangay");
 const addrVillage = document.getElementById("addr-village");

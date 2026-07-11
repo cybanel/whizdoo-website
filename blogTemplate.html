@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Put here whatever the blog title is</title>
+  </head>
+
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="10"
+        ></feGaussianBlur>
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7"
+          result="goo"
+        ></feColorMatrix>
+        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+
+  <body>
+    <nav class="nav">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+            <path d="M2 17l10 5 10-5" />
+            <path d="M2 12l10 5 10-5" />
+          </svg>
+        </div>
+        <div class="nav-name">Whiz<span>doo</span></div>
+      </a>
+
+      <button class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tutors.html">Tutors</a></li>
+        <li class="nav-dropdown">
+          <span class="nav-dropdown-toggle">Programs</span>
+          <ul class="nav-dropdown-menu">
+            <li><a href="programs.html">General Tutoring</a></li>
+            <li><a href="specialSessions.html">Special Sessions</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <li>
+          <a href="bookASession.html" class="blob-btn blob-btn--blue">
+            Book a Session
+            <span class="blob-btn__inner">
+              <span class="blob-btn__blobs">
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+                <span class="blob-btn__blob"></span>
+              </span>
+            </span>
+          </a>
+        </li>
+
+        <!-- <li><a href="bookASession.html" class="nav-btn">Book a Session</a></li> -->
+      </ul>
+    </nav>
+
+    <div class="article-wrap">
+      <div class="article-header">
+        <h1>Article Title</h1>
+        <p class="article-dek">lalalaa description</p>
+        <div class="article-byline">
+          <img src="images/author-photo.jpg" alt="Author Name" />
+          <div class="article-byline-text">
+            <span class="article-byline-name">By Author Name</span>
+            <span class="article-byline-date">June 12, 2026</span>
+          </div>
+        </div>
+        <div class="article-share">
+          <a href="#" aria-label="Share on Facebook">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+              />
+            </svg>
+          </a>
+          <a href="#" aria-label="Share on X">
+            <svg viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Share via email">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-10 7L2 7" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Copy link">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+              />
+              <path
+                d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="article-hero-photo">
+        <img
+          src="images/teacher-and-student-with-laptop-remote-learning-1909759503.png"
+          alt="Article cover photo"
+        />
+      </div>
+
+      <div class="article-body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+          pretium dapibus diam, a finibus metus congue a. Vestibulum laoreet
+          faucibus ultrices. Vestibulum condimentum lectus in arcu ultricies
+          condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum pretium dapibus diam, a finibus metus congue a. Vestibulum
+          laoreet faucibus ultrices. Vestibulum condimentum lectus in arcu
+          ultricies condimentum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+          pretium dapibus diam, a finibus metus congue a. Vestibulum laoreet
+          faucibus ultrices. Vestibulum condimentum lectus in arcu ultricies
+          condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum pretium dapibus diam, a finibus metus congue a. Vestibulum
+          laoreet faucibus ultrices. Vestibulum condimentum lectus in arcu
+          ultricies condimentum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
+          pretium dapibus diam, a finibus metus congue a. Vestibulum laoreet
+          faucibus ultrices. Vestibulum condimentum lectus in arcu ultricies
+          condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Vestibulum pretium dapibus diam, a finibus metus congue a. Vestibulum
+          laoreet faucibus ultrices. Vestibulum condimentum lectus in arcu
+          ultricies condimentum.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">Whiz<span>doo</span></div>
+          <div class="footer-tagline">
+            Learning should never feel like a chore.
+          </div>
+        </div>
+        <div class="footer-right">
+          <a href="https://www.facebook.com/Whizdoo " class="footer-fb"
+            >Follow us on Facebook</a
+          >
+          <p style="margin-top: 6px">
+            © 2025 Whizdoo Learning Center · Philippines
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
