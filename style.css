@@ -511,8 +511,9 @@ h3 {
 }
 
 .offer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.2rem;
 }
 
@@ -524,6 +525,8 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  flex: 0 1 calc(33.333% - 0.8rem); /* new — 0.8rem ≈ 2/3 of the 1.2rem gap */
+  min-width: 260px; /* new — optional, stops cards getting too narrow */
 }
 
 .offer-card h3 {
@@ -1525,7 +1528,7 @@ h3 {
     grid-template-columns: 1fr;
   }
   .offer-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   .split-section {
     grid-template-columns: 1fr;
@@ -2160,12 +2163,15 @@ h3 {
 }
 
 .special-subjects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .special-subject-card {
+  flex: 0 1 calc(33.333% - 1rem); /* 1rem ≈ 2/3 of the 1.5rem gap */
+  min-width: 260px; /* optional: stops cards getting too skinny before wrapping */
   background: #0a0050;
   border: 1px solid rgba(74, 144, 217, 0.2);
   border-radius: 16px;
@@ -2181,7 +2187,6 @@ h3 {
 .special-subject-card:hover {
   transform: translateY(-6px);
   border-color: rgba(230, 168, 23, 0.5);
-  box-shadow: 0 14px 34px rgba(74, 144, 217, 0.2);
 }
 
 .special-subject-photo {
@@ -2195,17 +2200,6 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.special-subject-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(18, 20, 46, 0) 50%,
-    rgba(18, 20, 46, 0.85) 100%
-  );
 }
 
 .special-subject-body {
@@ -2271,7 +2265,10 @@ h3 {
 
 @media (max-width: 768px) {
   .special-subjects-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .special-subject-card {
+    flex: 1 1 100%;
   }
   .special-hero {
     min-height: 90vh;
@@ -2342,32 +2339,11 @@ h3 {
   color: #ef476f;
   border-color: rgba(239, 71, 111, 0.35);
 }
-.special-subject-card.accent-coral:hover {
-  border-color: rgba(239, 71, 111, 0.5);
-  box-shadow: 0 14px 34px rgba(239, 71, 111, 0.25);
-}
-.special-subject-card.accent-coral .btn-special {
-  background: linear-gradient(90deg, #ef476f, #d63a5c);
-  color: #fff;
-}
 
 .special-subject-card.accent-teal .special-subject-badge {
   background: rgba(45, 212, 191, 0.12);
   color: #2dd4bf;
   border-color: rgba(45, 212, 191, 0.35);
-}
-.special-subject-card.accent-teal:hover {
-  border-color: rgba(45, 212, 191, 0.5);
-  box-shadow: 0 14px 34px rgba(45, 212, 191, 0.25);
-}
-.special-subject-card.accent-teal .btn-special {
-  background: linear-gradient(90deg, #2dd4bf, #14b8a6);
-  color: #0b3a34;
-}
-
-.special-subject-card.accent-gold:hover {
-  border-color: rgba(255, 180, 4, 0.5);
-  box-shadow: 0 14px 34px rgba(230, 168, 23, 0.25);
 }
 
 .subjects-strip {
